@@ -16,21 +16,25 @@
   <body>
     <header class="site-header">
       <div class="container">
-        <h1 class="title">LipAdapter</h1>
-        <p class="subtitle">A Minimal Research Project Page</p>
+        <h1 class="title">LipAdapter: Text-to-Video Alignment is All You Need for Lip-to-Speech</h1>
+        <!-- <p class="subtitle">Text-to-Video Alignment is All You Need for Lip-to-Speech</p> -->
         <p class="authors">
-          <span class="author">Author One</span>
+          <span class="author">Souvik Ghosh<sup>1</sup></span>
           <span class="dot">·</span>
-          <span class="author">Author Two</span>
+          <span class="author">C.V. Jawahar<sup>1</sup></span>
           <span class="dot">·</span>
-          <span class="author">Author Three</span>
+          <span class="author">Vinay Namboodiri<sup>2</sup></span>
         </p>
-        <p class="affiliations">Affiliation A, Affiliation B</p>
+        <p class="affiliations">
+          <span><sup>1</sup> IIIT Hyderabad</span><br>
+          <span><sup>2</sup> University of Bath</span>
+        </p>
+        <p>souvik.g@research.iiit.ac.in, jawahar@iiit.ac.in, vpn22@bath.ac.uk</p>
         <nav class="links">
-          <a class="btn" href="#" target="_blank" rel="noopener">Paper</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">arXiv</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">Video</a>
+          <a class="btn" href="#abstract" target="_blank" rel="noopener">Paper</a>
+          <!-- <a class="btn" href="#" target="_blank" rel="noopener">arXiv</a> -->
+          <a class="btn" href="" target="_blank" rel="noopener">Code</a>
+          <a class="btn" href="#video-demo" target="_blank" rel="noopener">Video</a>
           <a class="btn" href="#bibtex">BibTeX</a>
         </nav>
       </div>
@@ -40,16 +44,7 @@
       <section class="section">
         <div class="container">
           <div class="teaser">
-            <svg viewBox="0 0 1200 450" role="img" aria-label="Teaser">
-              <defs>
-                <linearGradient id="g" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#efefef" />
-                  <stop offset="100%" stop-color="#dcdcdc" />
-                </linearGradient>
-              </defs>
-              <rect width="1200" height="450" fill="url(#g)" />
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="36" fill="#666">Teaser placeholder — replace with your figure</text>
-            </svg>
+            <img src="assets/img/methodology.png" alt="LipAdapter methodology overview" loading="lazy" decoding="async">
           </div>
         </div>
       </section>
@@ -58,13 +53,12 @@
         <div class="container narrow">
           <h2>Abstract</h2>
           <p>
-            This is a short abstract describing LipAdapter. Replace this text with a concise
-            summary of your method, data, evaluation, and key results.
+            Lip-to-Speech synthesis aims to generate intelligible, natural-sounding, and temporally synchronized speech from silent visual recordings of a speaker. While recent end-to-end models have shown promising results, they require large amounts of training data and often lack out-of-dataset generalization. In this work, we introduce LipAdapter, a generic and efficient modular framework that adapts an existing frozen pre-trained Text-to-Speech model into a lip-synchronized speech generator. LipAdapter bridges the modularity gap between frozen Visual Speech Recognition(VSR) and Text-to-speech(TTS) models by aligning phoneme representation and lip embeddings via a novel text-to-video alignment module. Our model acheives state-of-the-art performance across multiple benchmarks in English while using 15× less training data than prior methods. We also demonstrate the model's zero-shot capabilities in multilingual lip-to-speech synthesis in French, German, Spanish and Portuguese.
           </p>
         </div>
       </section>
 
-      <section id="method" class="section">
+      <!-- <section id="method" class="section">
         <div class="container narrow">
           <h2>Method</h2>
           <p>
@@ -72,23 +66,154 @@
             where helpful. You can add images using <code>&lt;img src="assets/img/figure1.png" alt="Figure 1"&gt;</code>.
           </p>
         </div>
-      </section>
+      </section> -->
 
-      <section id="results" class="section">
+      <!-- <section id="results-english" class="section">
         <div class="container">
-          <h2>Results</h2>
+          <h2>Results (English)</h2>
           <div class="grid">
             <figure class="card">
               <div class="media placeholder"></div>
-              <figcaption>Qualitative example 1</figcaption>
+              <figcaption>English example 1</figcaption>
             </figure>
             <figure class="card">
               <div class="media placeholder"></div>
-              <figcaption>Qualitative example 2</figcaption>
+              <figcaption>English example 2</figcaption>
             </figure>
             <figure class="card">
               <div class="media placeholder"></div>
-              <figcaption>Qualitative example 3</figcaption>
+              <figcaption>English example 3</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- <section id="results-multilingual" class="section">
+        <div class="container">
+          <h2>Results (Multilingual)</h2>
+          <div class="grid">
+            <figure class="card">
+              <div class="media placeholder"></div>
+              <figcaption>French example</figcaption>
+            </figure>
+            <figure class="card">
+              <div class="media placeholder"></div>
+              <figcaption>German example</figcaption>
+            </figure>
+            <figure class="card">
+              <div class="media placeholder"></div>
+              <figcaption>Spanish example</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section> -->
+      <section id="video-demo" class="section">
+        <div class="container narrow">
+          <h2>Applications in In-the-Wild Videos</h2>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/IFasG_Yrx9M"
+              title="LipAdapter Demo"
+              loading="lazy"
+              decoding="async"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="video-demo" class="section">
+        <div class="container narrow">
+          <h2>Results in English</h2>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/C9Ke4hJUoIY"
+              title="LipAdapter Demo"
+              loading="lazy"
+              decoding="async"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="zero-shot-multilingual" class="section">
+        <div class="container narrow">
+          <h2>Zero-Shot Multilingual Results</h2>
+
+          <h3>French</h3>
+          <div class="grid">
+            <figure class="card">
+              <video class="media" controls preload="metadata">
+                <source src="assets/videos/fr1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>Ground Truth</figcaption>
+            </figure>
+            <figure class="card">
+              <video class="media" controls preload="metadata">
+                <source src="assets/videos/fr1_output.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>LipAdapter </figcaption>
+            </figure>
+          </div>
+
+          <h3>Spanish</h3>
+          <div class="grid">
+            <figure class="card">
+              <video class="media" controls preload="metadata">
+                <source src="assets/videos/es1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>Ground Truth</figcaption>
+            </figure>
+            <figure class="card">
+              <video class="media" controls preload="metadata">
+                <source src="assets/videos/es1_output.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>LipAdapter </figcaption>
+            </figure>
+          </div>
+
+          <h3>German</h3>
+          <div class="grid">
+            <figure class="card">
+              <video class="media" controls preload="metadata">
+                <source src="assets/videos/de1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>Ground Truth</figcaption>
+            </figure>
+            <figure class="card">
+              <video class="media" controls preload="metadata">
+                <source src="assets/videos/de1_output.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>LipAdapter </figcaption>
+            </figure>
+          </div>
+
+          <h3>Portuguese</h3>
+          <div class="grid">
+            <figure class="card">
+              <video class="media" controls preload="metadata">
+                <source src="assets/videos/pt1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>Ground Truth</figcaption>
+            </figure>
+            <figure class="card">
+              <video class="media" controls preload="metadata">
+                <source src="assets/videos/pt1_output.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>LipAdapter </figcaption>
             </figure>
           </div>
         </div>
@@ -98,32 +223,35 @@
         <div class="container narrow">
           <h2>Citation</h2>
           <div class="bibtex">
-            <pre id="bibtex-entry">@article{lipadapter2025,
+            <pre id="bibtex-entry">
+              <!-- @article{lipadapter2025,
   title   = {LipAdapter: Title Goes Here},
   author  = {First Author and Second Author and Third Author},
   journal = {Venue},
   year    = {2025},
   url     = {https://your-link-here}
-}</pre>
+} -->
+  
+</pre>
             <button class="btn small" data-copy-target="#bibtex-entry">Copy BibTeX</button>
           </div>
         </div>
       </section>
 
-      <section id="acknowledgements" class="section">
+      <!-- <section id="acknowledgements" class="section">
         <div class="container narrow">
           <h2>Acknowledgements</h2>
           <p>
             We thank collaborators and funding sources. Replace with your acknowledgements.
           </p>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <footer class="site-footer">
       <div class="container">
         <p>
-          © <span id="year"></span> LipAdapter. Built with a minimal, accessible template.
+          © <span id="year"></span> CVIT.
         </p>
       </div>
     </footer>
