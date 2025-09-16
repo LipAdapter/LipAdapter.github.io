@@ -11,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/og-image.png">
     <link rel="icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css?v=20250915">
   </head>
   <body>
     <header class="site-header">
@@ -43,14 +43,22 @@
     <main>
       <section class="section">
         <div class="container">
-          <div class="teaser">
-            <img src="assets/img/methodology.png" alt="LipAdapter methodology overview" loading="lazy" decoding="async">
+          <div class="grid-2">
+            <div class="media">
+              <img src="assets/img/methodology.png" alt="LipAdapter methodology overview" loading="lazy" decoding="async">
+            </div>
+            <div class="media">
+              <video class="media" controls preload="metadata">
+                <source src="assets/videos/output.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="abstract" class="section">
-        <div class="container narrow">
+        <div class="container">
           <h2>Abstract</h2>
           <p>
             Lip-to-Speech synthesis aims to generate intelligible, natural-sounding, and temporally synchronized speech from silent visual recordings of a speaker. While recent end-to-end models have shown promising results, they require large amounts of training data and often lack out-of-dataset generalization. In this work, we introduce LipAdapter, a generic and efficient modular framework that adapts an existing frozen pre-trained Text-to-Speech model into a lip-synchronized speech generator. LipAdapter bridges the modularity gap between frozen Visual Speech Recognition(VSR) and Text-to-speech(TTS) models by aligning phoneme representation and lip embeddings via a novel text-to-video alignment module. Our model acheives state-of-the-art performance across multiple benchmarks in English while using 15× less training data than prior methods. We also demonstrate the model's zero-shot capabilities in multilingual lip-to-speech synthesis in French, German, Spanish and Portuguese.
@@ -108,41 +116,51 @@
         </div>
       </section> -->
       <section id="video-demo" class="section">
-        <div class="container narrow">
+        <div class="container">
           <h2>Applications in In-the-Wild Videos</h2>
-          <div class="video">
-            <iframe
-              src="https://www.youtube.com/embed/IFasG_Yrx9M"
-              title="LipAdapter Demo"
-              loading="lazy"
-              decoding="async"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+          <div class="grid-2">
+            <div class="video">
+              <iframe
+                src="https://www.youtube.com/embed/IFasG_Yrx9M"
+                title="LipAdapter Demo"
+                loading="lazy"
+                decoding="async"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="media">
+              <img src="assets/img/applications.png" alt="Applications overview" loading="lazy" decoding="async">
+            </div>
           </div>
         </div>
       </section>
 
       <section id="video-demo" class="section">
-        <div class="container narrow">
+        <div class="container">
           <h2>Results in English</h2>
-          <div class="video">
-            <iframe
-              src="https://www.youtube.com/embed/C9Ke4hJUoIY"
-              title="LipAdapter Demo"
-              loading="lazy"
-              decoding="async"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+          <div class="grid-2">
+            <div class="video">
+              <iframe
+                src="https://www.youtube.com/embed/C9Ke4hJUoIY"
+                title="LipAdapter Demo"
+                loading="lazy"
+                decoding="async"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="media">
+              <img src="assets/img/mel_comparison.png" alt="Mel spectrogram comparison" loading="lazy" decoding="async">
+            </div>
           </div>
         </div>
       </section>
 
       <section id="zero-shot-multilingual" class="section">
-        <div class="container narrow">
+        <div class="container">
           <h2>Zero-Shot Multilingual Results</h2>
 
           <h3>French</h3>
